@@ -14,7 +14,7 @@ env:
   REGION: eastus
 
   STORE_DOCKER: Store/Dockerfile
-  STORE_IMAGE: store
+  STORE_IMAGE: castore
 
   INVENTORY_DOCKER: Store.InventoryApi/Dockerfile
   INVENTORY_IMAGE: inventory
