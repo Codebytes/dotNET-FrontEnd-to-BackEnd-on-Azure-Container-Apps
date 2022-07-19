@@ -17,10 +17,10 @@ env:
   STORE_IMAGE: castore
 
   INVENTORY_DOCKER: Store.InventoryApi/Dockerfile
-  INVENTORY_IMAGE: inventory
+  INVENTORY_IMAGE: cainventory
 
   PRODUCTS_DOCKER: Store.ProductApi/Dockerfile
-  PRODUCTS_IMAGE: products
+  PRODUCTS_IMAGE: caproducts
 
 jobs:
   provision:
