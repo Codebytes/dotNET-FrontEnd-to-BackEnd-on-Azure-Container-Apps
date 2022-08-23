@@ -52,9 +52,9 @@ jobs:
     - uses: azure/arm-deploy@v1
       id: resources
       with:
-        resourceGroupName: env.RESOURCE_GROUP_NAME 
+        resourceGroupName: ${{ env.RESOURCE_GROUP_NAME }}
         template: /github/workspace/Azure/main.bicep
-        parameters: appBaseName=env.APP_BASE_NAME
+        parameters: appBaseName=${{ env.APP_BASE_NAME }}
         additionalArguments: "--debug"
     outputs:
       acrName: ${{ steps.resources.outputs.acrName }}
