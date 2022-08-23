@@ -56,13 +56,14 @@ jobs:
         template: /github/workspace/Azure/main.bicep
         parameters: appBaseName=env.APP_BASE_NAME
         additionalArguments: "--debug"
-
+    outputs:
+      acrName: ${{ steps.resources.outputs.acrName }}
   build:
     runs-on: ubuntu-latest
-    needs: provision
-  
+    needs: provision  
+    
     env:
-      ACRNAME: ${{ steps.resources.outputs.acrName }}
+      ACRNAME: ${{ needs.provision.outputs.acrName }}
 
     steps:
 
