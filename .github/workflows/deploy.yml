@@ -55,7 +55,7 @@ jobs:
         resourceGroupName: ${{ env.RESOURCE_GROUP_NAME }}
         template: ./Azure/main.bicep
         parameters: appBaseName=${{ env.APP_BASE_NAME }}
-        additionalArguments: "--debug"
+
     outputs:
       acrName: ${{ steps.resources.outputs.acrName }}
   build:

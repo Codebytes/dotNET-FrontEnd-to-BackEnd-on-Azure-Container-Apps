@@ -1,9 +1,11 @@
 param location string = resourceGroup().location
 param appBaseName string = toLower(replace(resourceGroup().name, '-', ''))
 
+var acrName = '${toLower(replace(appBaseName, '-', ''))}acr'
+
 // create the azure container registry
 resource acr 'Microsoft.ContainerRegistry/registries@2021-09-01' = {
-  name: '${appBaseName}acr'
+  name: acrName
   location: location
   sku: {
     name: 'Basic'
