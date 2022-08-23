@@ -53,7 +53,7 @@ jobs:
       id: resources
       with:
         resourceGroupName: ${{ env.RESOURCE_GROUP_NAME }}
-        template: /github/workspace/Azure/main.bicep
+        template: ./Azure/main.bicep
         parameters: appBaseName=${{ env.APP_BASE_NAME }}
         additionalArguments: "--debug"
     outputs:
