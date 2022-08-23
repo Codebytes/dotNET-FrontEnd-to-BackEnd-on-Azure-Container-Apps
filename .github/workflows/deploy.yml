@@ -62,7 +62,7 @@ jobs:
     needs: provision
   
     env:
-      ACRNAME = '${{ steps.resources.outputs.acrName }}'
+      ACRNAME: ${{ steps.resources.outputs.acrName }}
 
     steps:
 
